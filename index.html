@@ -1,0 +1,28 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <div>
+        <label id="label1"></label><br/>
+        <button onclick="findLargestNumber()">Find the largest number</button><br/>
+        <label id="result"></label>
+        </div>
+        <script>
+            var arr = [1234, 12, 845, 12345, 936, 87, 9478]
+            var count=arr.length;
+            var lnum=arr[0];
+            document.getElementById('label1').innerText = "To find the largest number from the number array [" + arr + "], click the below button"
+            function findLargestNumber(){
+                for (var i=0; i<count;i++){
+                    if(arr[i]>lnum){
+                        lnum=arr[i];  
+                    }
+                }
+                console.log("Array is " + arr)
+                console.log("The largest number from the number array is " + lnum);
+                document.getElementById('result').innerText="The largest number is "+ lnum;
+            }
+        </script>
+    </body>
+</html>
